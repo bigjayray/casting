@@ -1,0 +1,1333 @@
+{
+	"info": {
+		"_postman_id": "afdedabf-cd98-4846-a419-fd5f4ced81ea",
+		"name": "udacity-capstone-casting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/casting/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "904c2142-bc3d-484b-a3da-d536ae81fe5a",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"End of the wicked\",\n  \"release_date\": \"2020-07-14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies"
+							]
+						},
+						"description": "Create a new movie\n"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0449a311-8a44-43df-b175-448130d6c76f",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"age\": \"14\",\n  \"gender\": \"Male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors"
+							]
+						},
+						"description": "Create a new actor"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "774a7eb4-dd12-4cbf-8668-0e8086a430ac",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies"
+							]
+						},
+						"description": "Get movies"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ee43f7a1-63d1-47a5-aa01-aa99548784b9",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors"
+							]
+						},
+						"description": "Get actors"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies/<int:movie_id>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "579b50f2-a61e-4760-af2b-8be8b6014e45",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"I'll go anywhere with you\",\n  \"release_date\": \"2020-07-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Update a movie. Pass id in request."
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors/<int:actorid>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dee59de4-550f-4093-afaf-3297957e2aeb",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Jane Doe\",\n  \"age\": \"24\",\n  \"gender\": \"Female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors",
+								"1"
+							]
+						},
+						"description": "Update an actor. Pass actor id in request."
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies/<int:movie_id>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eca2152a-24a2-4188-b404-675fa0b688bd",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Delete a movie. Pass movie id in request"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors/<int:actorid>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "efef89bf-1219-42a4-931d-eedea8860a11",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg0ZGQyZWIzMDMwMDE5Yzg3NWVkIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMTg2MywiZXhwIjoxNTk0ODA4MjYzLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.foEgZln1CrUUyPFiSZwWt-gRivFvojReMR5vZXPJj9_6uPyQ11wyUJn9Lcczgucw7TKxHPdN2HZj3PgO-yarYu7w6nG23c1luwNi-mBIlRvAKsnBysCqXxq-F0H6iYK8GIhwE7P0prbzCO0La5Rn6b_JxaAcWNegpGVTfM7JqtL2DRH93apuqmeiuaueranoPSO84ISmd53v8u_OOUlzOq5c7CpJ_Hcn126ofkQvIcSgc4HD8KcS0R0psrNmGyegvvMfQdmEWZhLNCN6h9lOobr4F3Ya7hbzNLS0n12tQ3OrljNmA4rlxu_3mDn73sB2K6YByZT3Vg4vaMD5M32aKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors",
+								"1"
+							]
+						},
+						"description": "Delete an actor"
+					},
+					"response": []
+				}
+			],
+			"description": "Can view actors and movies",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/casting/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae1ed01f-d5d4-4a9c-ae5b-d4b42494a36a",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"End of the wicked\",\n  \"release_date\": \"2020-07-14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies"
+							]
+						},
+						"description": "Create a new movie\n"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7d49998f-5390-4820-994a-58e3db8b1034",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"age\": \"14\",\n  \"gender\": \"Male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors"
+							]
+						},
+						"description": "Create a new actor"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ee6cb43b-927b-40ea-a59b-be3872e96ec2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies"
+							]
+						},
+						"description": "Get movies"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "aa2e948b-8743-4277-860b-f63a6b99cae2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors"
+							]
+						},
+						"description": "Get actors"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies/<int:movie_id>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "50dba3f4-e112-414b-8672-1420431b6886",
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"I'll go anywhere with you\",\n  \"release_date\": \"2020-07-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Update a movie. Pass id in request."
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors/<int:actorid>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "37dc14e6-7ada-495e-ba1f-66f453cc95fb",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Jane Doe\",\n  \"age\": \"24\",\n  \"gender\": \"Female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors",
+								"1"
+							]
+						},
+						"description": "Update an actor. Pass actor id in request."
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies/<int:movie_id>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f688cbde-eafe-4fdd-9c13-bb8fdd7cff3f",
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {",
+									"    pm.response.to.have.status(403);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Delete a movie. Pass movie id in request"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors/<int:actorid>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c9101ac6-84c3-4697-8b5c-e19050e49c7a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1MmJhMTViN2IwMDEzNjIyMGVhIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMjYwMSwiZXhwIjoxNTk0ODA5MDAxLCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.Ek1ghR7q2dMeBlZQ7t0TeDHspUSDiPhsOXCjWYIrJzrelGoOsz3tWDQwQkV9ph1h39mlwzfBKyDt8GM8uinvd8A0q0ZbXFpbTmoMmgISiyohEmOQv6RJi7zyjeyvN5jLq6cM5KSmtIvp-WNGBM8D3Q-y1-kU14ORtTqUNL_4BBYu_1ayEvDAEJ902PtYNue5PSdiq2JBk-G1mdWlQBtR_V-kcxsYULmSHLQ67DcITu6a3qXxVuN89jN6oOnL6j3domub3VJrjnOx3UHPB1KQNplc8si4z1QU7UTCGwUiIii9uphma3J--F0oMlO3CDY18uHdKzg1TCoZxHQNeFKdtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors",
+								"1"
+							]
+						},
+						"description": "Delete an actor"
+					},
+					"response": []
+				}
+			],
+			"description": "All permissions of casting assistant, can add or delete an actor and can modify actors or movies.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "http://127.0.0.1:5000/casting/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "701ad6d5-a904-4b6a-922b-1fb97dfa1c00",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"End of the wicked\",\n  \"release_date\": \"2020-07-14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies"
+							]
+						},
+						"description": "Create a new movie\n"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "120fc910-eeb7-4685-bed0-bc0a41ce37cf",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"age\": \"14\",\n  \"gender\": \"Male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors"
+							]
+						},
+						"description": "Create a new actor"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0290c67e-10cc-4985-b5ee-c6515d2c9d0e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains movies array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.movies).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies"
+							]
+						},
+						"description": "Get movies"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "831bfd4b-546a-450c-8216-73234d51d77e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains actors array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.actors).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors"
+							]
+						},
+						"description": "Get actors"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies/<int:movie_id>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce86349e-62ff-4fb9-958a-8edd692aa555",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"I'll go anywhere with you\",\n  \"release_date\": \"2020-07-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Update a movie. Pass id in request."
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors/<int:actorid>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5aa89275-b44a-44ca-bcf4-6925379e3a76",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Jane Doe\",\n  \"age\": \"24\",\n  \"gender\": \"Female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors",
+								"2"
+							]
+						},
+						"description": "Update an actor. Pass actor id in request."
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/movies/<int:movie_id>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3a49fa33-e558-4da8-b980-fa12acf5b621",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Delete a movie. Pass movie id in request"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:5000/casting/actors/<int:actorid>",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "59f80909-4e4f-4826-9562-491d28832f6d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlVQb3RLSFVoTHRvM2RMWWFFRWVJUyJ9.eyJpc3MiOiJodHRwczovL2pvaS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYwZDg1NTc3MTQ2OGMwMDEzMDAyOTJlIiwiYXVkIjoiQ2FzdGluZyIsImlhdCI6MTU5NDcyMzE3OSwiZXhwIjoxNTk0ODA5NTc5LCJhenAiOiJicEJIbGpDODBQQ2h0NnNnbDRxMkFJTXRQWlhUZ01yeSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.CF1aica2viMwrbPpkOfpCltxd4m09dL_SJyeBWaAaAav-QUcEVhTAQBc2U5r3Gg5FNbS-PUOvpKWePKbvM3YhsKjeUd2W8lgNI2RbjvVv9bY3BWXtQuZymvf-RBFc9hgJtWc8JwVlUf-Bs_H9TooIsK8_HtiToq34c0ClcNCgfxSZMKOZ5IO-IlUegaNiB1BFWjN5kBzNeJrWDD-VrdQG_wWGj_PJCKhp0ji5cUmUD4oYTwKhSGABy4GlJNm_l5pLSnQX9e2dhslAnVN0y_K5whej_O0GH8acQHqG8p-UTZyZKmqc4XkKcUBBd8qbup-vexMUd4zvaEEeqh8lWOcRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/casting/actors/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"casting",
+								"actors",
+								"2"
+							]
+						},
+						"description": "Delete an actor"
+					},
+					"response": []
+				}
+			],
+			"description": "All permissions of casting director and can add or delete a movie.",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
