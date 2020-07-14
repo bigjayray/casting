@@ -3,9 +3,9 @@ from sqlalchemy import Column, String, Integer, create_engine, Date
 from flask_sqlalchemy import SQLAlchemy
 import json
 
-# database_name = "casting"
-# database_path = "postgresql://{}:{}@{}/{}".format('postgres', 'postgres', 'localhost:5432', database_name)
-database_path = "postgres://iogkdbxvphllfy:fe8d4ac98d57169e54886aea6b120f0ca226f903713f40f96e2c61ec8a6ac209@ec2-54-146-4-66.compute-1.amazonaws.com:5432/da3btsuh5nciev"
+database_name = "casting"
+database_path = "postgresql://{}:{}@{}/{}".format('postgres', 'postgres', 'localhost:5432', database_name)
+# database_path = "postgres://iogkdbxvphllfy:fe8d4ac98d57169e54886aea6b120f0ca226f903713f40f96e2c61ec8a6ac209@ec2-54-146-4-66.compute-1.amazonaws.com:5432/da3btsuh5nciev"
 
 db = SQLAlchemy()
 
